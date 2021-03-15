@@ -26,7 +26,7 @@ function changeAllValuesTo(arr, value) {
 
 }
 
-function oddOrEven(arr) {
+function oddOrEven(array) {
   // const isEven = arr % 2 === 0;
   // const isOdd = arr % 2 === 1;
 
@@ -36,16 +36,29 @@ function oddOrEven(arr) {
   // if (arr === isOdd) {
   //   return 'odd';
   // }
-  for (let i = 0; i < arr.length; i ++) {
-    const number = arr[i];
-    if (number % 2 === 0) {
-      return arr[i].push('even');
-    }
-    if (number % 2 === 1) {
-      return arr[i].push('odd');
+  // for (let i = 0; i < arr.length; i ++) {
+  //   let number = arr[i];
+  //   if (number % 2 === 0) {
+  //     return 'even';
+  //   }
+  //   if (number % 2 === 1) {
+  //     return 'odd';
+  //   }
+  // }
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 1) {
+      array[i] = 'odd';
+    } else {
+      array[i] = 'even';
     }
   }
 
+}
+
+function changeNextThreeToValue(index, array, value) {
+  for (let i = index; i < index +3; i++) {
+    array[i] = value;
+  }
 }
 
 
